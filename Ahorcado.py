@@ -60,15 +60,31 @@ IMÁGENES_AHORCADO = ['''
  /|\  |
  / \  |
       |
-=========''']
+=========''','''
+  +---+
+  |   |
+ [O   |
+ /|\  |
+ / \  |
+      |
+==========''', '''
+  +---+
+  |   |
+ [O]  |
+ /|\  |
+ / \  |
+      |
+==========''']
 
 palabras = 'hormiga babuino tejon murcielago oso castor camello gato almeja cobra pantera coyote cuervo ciervo perro burro pato aguila huron zorro rana cabra ganso halcon leon lagarto llama topo mono alce raton mula salamandra nutria buho panda loro paloma piton conejo carnero rata cuervo rinoceronte salmon foca tiburon oveja mofeta perezoso serpiente araña cigüeña cisne tigre sapo trucha pavo tortuga comadreja ballena lobo wombat cebra'.split()
+#palabras = palabras = 'rojo naranja amarillo verde azul añil violeta blanco negro marron'.split()
+#palabras = 'cuadrado triangulo rectangulo circulo elipse rombo trapezoide pentagono hexagono heptagono octogono'.split()
+#palabras = 'manzana naranja limon lima pera sandia uva pomelo cereza banana melon mango fresa tomate'.split()
 
 def obtenerPalabraAlAzar(listaDePalabras):
       # Esta función devuelve una cadena al azar de la lista de cadenas pasada como argumento.
       índiceDePalabras = random.randint(0, len(listaDePalabras) - 1)
       return listaDePalabras[índiceDePalabras]
-
 
 def mostrarTablero(IMÁGENES_AHORCADO, letrasIncorrectas, letrasCorrectas, palabraSecreta):
       print(IMÁGENES_AHORCADO[len(letrasIncorrectas)])
@@ -100,14 +116,11 @@ def obtenerIntento(letrasProbadas):
             else:
                   return intento
 
-
 def jugarDeNuevo():
       # Esta función devuelve True si el jugador quiere volver a jugar, en caso contrario devuelve False.
       print('¿Quieres jugar de nuevo? (sí o no)')
       return input().lower().startswith('s')
       
-
-
 def main():
       print('A H O R C A D O')
       letrasIncorrectas = ''
