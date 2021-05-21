@@ -164,7 +164,7 @@ def realizarMovida(tablero, cofres, x, y):
 
     #Si encuentra un cofre      
     if menorDistancia == 0:
-        # ¡xy está directamente sobre un cofre!
+        # ¡xy está directamente sobre un cofre!, se remueve un cofre
         cofres.remove([x, y])
         return 'Has encontrado un cofre del tesoro hundido!!'
     #Si no encuentra un cofre
